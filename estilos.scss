@@ -1,4 +1,8 @@
-
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 .sectionImagen{
     border-radius: 10px;
     background-image: url(./imagenes/Conciertos-960x768.jpg);
@@ -6,13 +10,14 @@
     height: 700px;
     margin-left: 10%;
     margin-top: 5PX;
-    .fontAlign{
-        
-        text-shadow: 5px 5px 5px white;
-        text-align: center;
-        padding-top: 25%;
-        font-family: fantasy;
-    }
+    background-size: cover;
+    background-position: center;
+}    
+.fontAlign{
+    text-shadow: 5px 5px 5px white;
+    text-align: center;
+    padding-top: 25%;
+    font-family: fantasy;
 }
 .sectionImagen2{
     border-radius: 10px;
@@ -22,13 +27,12 @@
     height: 700px;
     margin-left: 10%;
     margin-top: 5PX;
-    .fontAlign{
-        
-        text-shadow: 5px 5px 5px white;
-        text-align: center;
-        padding-top: 25%;
-        font-family: fantasy;
-    }
+    background-size: cover;
+    background-position: center;
+    
+}
+.fontAlign1{
+    @extend .fontAlign;
 }
 .sectionImagen3{
     border-radius: 10px;
@@ -37,13 +41,11 @@
     height: 700px;
     margin-left: 10%;
     margin-top: 5PX;
-    .fontAlign2{
-        color: crimson;
-        text-shadow: 5px 5px 5px white;
-        text-align: center;
-        padding-top: 25%;
-        font-family: fantasy;
-    }
+    background-size: cover;
+    background-position: center;
+}
+.fontAlign2{
+    @extend .fontAlign;
 }
 /*---------------imagenes con textos-------------*/
 .alinearMapa{
@@ -58,6 +60,25 @@
     margin-bottom: 5%;
 }
 /*-----------------------mapa----------------------------*/
+.box{
+    margin-left: 30%;
+    padding-top: 50px;
+    color: aliceblue;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 10%;
+}
+
+@mixin sizes ($height, $width, $bcolor){
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+}
+
+.box{
+    @include sizes (200px, 500px, red)
+}
+
 .barra{
     margin-top: 3%;
     width: 100%;

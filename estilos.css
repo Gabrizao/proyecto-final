@@ -1,3 +1,10 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .sectionImagen {
   border-radius: 10px;
   background-image: url(./imagenes/Conciertos-960x768.jpg);
@@ -5,9 +12,11 @@
   height: 700px;
   margin-left: 10%;
   margin-top: 5PX;
+  background-size: cover;
+  background-position: center;
 }
 
-.sectionImagen .fontAlign {
+.fontAlign, .fontAlign1, .fontAlign2 {
   text-shadow: 5px 5px 5px white;
   text-align: center;
   padding-top: 25%;
@@ -23,13 +32,8 @@
   height: 700px;
   margin-left: 10%;
   margin-top: 5PX;
-}
-
-.sectionImagen2 .fontAlign {
-  text-shadow: 5px 5px 5px white;
-  text-align: center;
-  padding-top: 25%;
-  font-family: fantasy;
+  background-size: cover;
+  background-position: center;
 }
 
 .sectionImagen3 {
@@ -39,14 +43,8 @@
   height: 700px;
   margin-left: 10%;
   margin-top: 5PX;
-}
-
-.sectionImagen3 .fontAlign2 {
-  color: crimson;
-  text-shadow: 5px 5px 5px white;
-  text-align: center;
-  padding-top: 25%;
-  font-family: fantasy;
+  background-size: cover;
+  background-position: center;
 }
 
 /*---------------imagenes con textos-------------*/
@@ -65,6 +63,21 @@
 }
 
 /*-----------------------mapa----------------------------*/
+.box {
+  margin-left: 30%;
+  padding-top: 50px;
+  color: aliceblue;
+  text-align: center;
+  font-size: xx-large;
+  border-radius: 10%;
+}
+
+.box {
+  height: 200px;
+  width: 500px;
+  background-color: red;
+}
+
 .barra {
   margin-top: 3%;
   width: 100%;
