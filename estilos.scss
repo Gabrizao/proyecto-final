@@ -1,75 +1,143 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+body{
+    background-image: linear-gradient(to left,violet, black);
 }
-.sectionImagen{
-    border-radius: 10px;
-    background-image: url(./imagenes/Conciertos-960x768.jpg);
-    width: 80%;
-    height: 700px;
-    margin-left: 10%;
-    margin-top: 5PX;
+
+/*-----------------color del body--------------*/
+.presentacion{
+    padding-top: 9%;
+    padding-bottom: 5%;
+    color: aliceblue;
+    background-image: url(./imagenes/AdobeStock_288522986-1024x576.jpg);
     background-size: cover;
     background-position: center; 
-}    
+    .hrPadre{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .hrLetra{
+            font-family: fantasy;
+            font-size: 100px;
+            text-align: center;
+        }
+    }
+    .parrafoPadre{
+        @extend .hrPadre;
+        .parrafoHijo{
+            @extend .hrLetra;
+            font-size: 20px;
+            text-align: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+}
+/*-----------------presentacion---------------------------*/
+.menuFlex{
+    
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to left,rgb(251, 250, 250),rgb(100, 98, 100) );
+    .gi{
+        width: 30%;
+        height: 100%; 
+        color: white;
+        margin-top: 1%;
+        margin-right: 3px;
+        text-align: end;
+        font-size: xx-large;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-shadow: 10px 10px 10px black;
+    }
+    .pmm{
+        width: 30%;
+        color: rgb(0, 0, 0);
+        margin-top: 2%; 
+        padding-left: 3%;
+        font-size: larger;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+    li{
+        width: 40%;
+        font-size: large;
+        list-style: none;
+        display: flex;
+        margin-right: 2%;
+        margin-top: 30px;
+            ul{
+                a{
+                    color: rgb(0, 0, 0);
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                a:hover{
+                    color: white;
+                    border: 10px black;
+                    border-radius: 10px;
+                    font-size: larger;
+                    transition: 1s;
+                    background-image: linear-gradient(to left,violet, black);
+            }
+        }
+    }
+}
+
+/*-----------------menu nav---------------*/
+.sectionImagen{
+    border-radius: 10px;
+    border: 4px solid rgb(37, 37, 37);
+    background-image: url(./imagenes/Conciertos-960x768.jpg);
+    align-content: center;
+    width: 40%;
+    height: 410px;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-size: cover;
+    background-position: center; 
+}
 .fontAlign{
     text-shadow: 5px 5px 5px white;
     text-align: center;
     padding-top: 25%;
     font-family: fantasy;
 }
+.fontAlign:hover{
+    transition: 1s;
+    color: crimson;
+    font-size: xx-large;
+}
 .sectionImagen2{
-    border-radius: 10px;
+    @extend .sectionImagen;
+    margin-left: 50%;
     background-image: url(./imagenes/2019-04-06-Los-recitales.webp);
-    object-fit: contain;
-    width: 80%;
-    height: 700px;
-    margin-left: 10%;
-    margin-top: 5PX;
-    background-size: cover;
-    background-position: center;
-    
 }
 .fontAlign1{
     @extend .fontAlign;
 }
 .sectionImagen3{
-    border-radius: 10px;
+    @extend .sectionImagen;
     background-image: url(./imagenes/mesa_grabacion_02_1200x500.jpg);
-    width: 80%;
-    height: 700px;
-    margin-left: 10%;
-    margin-top: 5PX;
-    background-size: cover;
-    background-position: center;
+    margin-left: 30%;
 }
 .fontAlign2{
     @extend .fontAlign;
 }
 /*---------------imagenes con textos-------------*/
-.alinearMapa{
-    display: flex;
-}
-
 .mapa{
-    width: 250px;
-    height: 250px;
-    margin-left: 80%;
+    width: 300px;
+    height: 300px;
+    margin-left: 41%;
     margin-top: 10%;
     margin-bottom: 5%;
+    border-radius: 10px;
+    border: solid 10px rgb(142, 4, 142);
 }
 .ubicaionTexto{
     font-family: fantasy;
     text-align: center;
     text-shadow: 5px 5px 5px;
-}
-.mapa1{
-    width: 250px;
-    height: 250px;
-    margin-left:40%;
-    margin-top: 10%;
-    margin-bottom: 5%;
 }
 /*-----------------------mapa----------------------------*/
 .box{
@@ -114,10 +182,136 @@
         margin-top: 1%;
         width: 50%;
         text-shadow: 5px 5px 5px rgb(234, 222, 222) ;
-    }
+        }
     .graciasFont{
         font-size: xx-large;
+    } 
+}
+/*------------------barra de gracias---------*/
+@media (max-width:1050px){
+    .menuFlex{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left,rgb(251, 250, 250),rgb(100, 98, 100) );
+        .gi{
+            color: white;
+            width: 100%;
+            margin-top: 1%;
+            text-align: center;
+            border-bottom: 5px radius black;
+        }
+        .pmm{
+            width: 100%;
+            color: rgb(0, 0, 0);
+            margin-top: 2%; 
+            text-align: center;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        li{
+            width: 100%;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+                ul{
+                    flex-wrap: wrap;
+                    text-align: center;
+                    font-size: large;
+                    a{
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                    a:hover{
+                        color: rgb(255, 255, 255);
+                        border: 10px black;
+                        border-radius: 10px;
+                        font-size: x-large;
+                        transition: 1s;
+                }
+            }
+        }
     }
 }
-/*--------------gracias por elegirnos---------------------------*/
-
+@media (max-width: 600px){
+    .menuFlex{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to left,rgb(251, 250, 250),rgb(100, 98, 100) );
+        .gi{
+            color: white;
+            width: 100%;
+            margin-top: 1%;
+            text-align: center;
+            border-bottom: 5px radius black;
+        }
+        .pmm{
+            width: 100%;
+            color: rgb(0, 0, 0);
+            margin-top: 2%; 
+            text-align: center;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        li{
+            width: 100%;
+            list-style: none;
+            flex-direction: column;
+            margin-top: 30px;
+                ul{
+                    text-align: center;
+                    font-size: large;
+                    width: 100%;
+                    a{
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                    a:hover{
+                        color: rgb(255, 255, 255);
+                        border: 10px black;
+                        border-radius: 10px;
+                        font-size: xx-large;
+                        transition: 1s;
+                }
+            }
+        }
+    }
+    .sectionImagen{
+        background-image: url(./imagenes/Conciertos-960x768.jpg);
+        width: 80%;
+        height: 350px;
+        margin-left: 10%;
+    }    
+    .fontAlign:hover{
+        color: crimson;
+    }
+    .sectionImagen2{
+        background-image: url(./imagenes/2019-04-06-Los-recitales.webp);
+    }
+    .sectionImagen3{
+        background-image: url(./imagenes/mesa_grabacion_02_1200x500.jpg); 
+    }
+    .mapa{
+        width: 100%;
+        height: 300px;
+        margin-left: 0%;
+        margin-top: 0%;
+        margin-bottom: 5%;
+        border-radius: 10px;
+        border: solid 10px rgb(142, 4, 142);
+    }
+}
+/*-----------------all responsive----------------*/
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);

@@ -1,17 +1,117 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+body {
+  background-image: -webkit-gradient(linear, right top, left top, from(violet), to(black));
+  background-image: linear-gradient(to left, violet, black);
 }
 
-.sectionImagen {
+/*-----------------color del body--------------*/
+.presentacion {
+  padding-top: 9%;
+  padding-bottom: 5%;
+  color: aliceblue;
+  background-image: url(./imagenes/AdobeStock_288522986-1024x576.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.presentacion .hrPadre, .presentacion .parrafoPadre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.presentacion .hrPadre .hrLetra, .presentacion .parrafoPadre .hrLetra, .presentacion .parrafoPadre .parrafoHijo {
+  font-family: fantasy;
+  font-size: 100px;
+  text-align: center;
+}
+
+.presentacion .parrafoPadre .parrafoHijo {
+  font-size: 20px;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*-----------------presentacion---------------------------*/
+.menuFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#fbfafa), to(#646264));
+  background-image: linear-gradient(to left, #fbfafa, #646264);
+}
+
+.menuFlex .gi {
+  width: 30%;
+  height: 100%;
+  color: white;
+  margin-top: 1%;
+  margin-right: 3px;
+  text-align: end;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 10px 10px 10px black;
+}
+
+.menuFlex .pmm {
+  width: 30%;
+  color: black;
+  margin-top: 2%;
+  padding-left: 3%;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.menuFlex li {
+  width: 40%;
+  font-size: large;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2%;
+  margin-top: 30px;
+}
+
+.menuFlex li ul a {
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuFlex li ul a:hover {
+  color: white;
+  border: 10px black;
   border-radius: 10px;
+  font-size: larger;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-image: -webkit-gradient(linear, right top, left top, from(violet), to(black));
+  background-image: linear-gradient(to left, violet, black);
+}
+
+/*-----------------menu nav---------------*/
+.sectionImagen, .sectionImagen2, .sectionImagen3 {
+  border-radius: 10px;
+  border: 4px solid #252525;
   background-image: url(./imagenes/Conciertos-960x768.jpg);
-  width: 80%;
-  height: 700px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 40%;
+  height: 410px;
   margin-left: 10%;
-  margin-top: 5PX;
+  margin-top: 10%;
+  margin-bottom: 10%;
   background-size: cover;
   background-position: center;
 }
@@ -23,57 +123,38 @@
   font-family: fantasy;
 }
 
+.fontAlign:hover, .fontAlign1:hover, .fontAlign2:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: crimson;
+  font-size: xx-large;
+}
+
 .sectionImagen2 {
-  border-radius: 10px;
+  margin-left: 50%;
   background-image: url(./imagenes/2019-04-06-Los-recitales.webp);
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 80%;
-  height: 700px;
-  margin-left: 10%;
-  margin-top: 5PX;
-  background-size: cover;
-  background-position: center;
 }
 
 .sectionImagen3 {
-  border-radius: 10px;
   background-image: url(./imagenes/mesa_grabacion_02_1200x500.jpg);
-  width: 80%;
-  height: 700px;
-  margin-left: 10%;
-  margin-top: 5PX;
-  background-size: cover;
-  background-position: center;
+  margin-left: 30%;
 }
 
 /*---------------imagenes con textos-------------*/
-.alinearMapa {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .mapa {
-  width: 250px;
-  height: 250px;
-  margin-left: 80%;
+  width: 300px;
+  height: 300px;
+  margin-left: 41%;
   margin-top: 10%;
   margin-bottom: 5%;
+  border-radius: 10px;
+  border: solid 10px #8e048e;
 }
 
 .ubicaionTexto {
   font-family: fantasy;
   text-align: center;
   text-shadow: 5px 5px 5px;
-}
-
-.mapa1 {
-  width: 250px;
-  height: 250px;
-  margin-left: 40%;
-  margin-top: 10%;
-  margin-bottom: 5%;
 }
 
 /*-----------------------mapa----------------------------*/
@@ -131,5 +212,139 @@
   font-size: xx-large;
 }
 
-/*--------------gracias por elegirnos---------------------------*/
+/*------------------barra de gracias---------*/
+@media (max-width: 1050px) {
+  .menuFlex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, right top, left top, from(#fbfafa), to(#646264));
+    background-image: linear-gradient(to left, #fbfafa, #646264);
+  }
+  .menuFlex .gi {
+    color: white;
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+    border-bottom: 5px radius black;
+  }
+  .menuFlex .pmm {
+    width: 100%;
+    color: black;
+    margin-top: 2%;
+    text-align: center;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .menuFlex li {
+    width: 100%;
+    list-style: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menuFlex li ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+    font-size: large;
+  }
+  .menuFlex li ul a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .menuFlex li ul a:hover {
+    color: white;
+    border: 10px black;
+    border-radius: 10px;
+    font-size: x-large;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 600px) {
+  .menuFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, right top, left top, from(#fbfafa), to(#646264));
+    background-image: linear-gradient(to left, #fbfafa, #646264);
+  }
+  .menuFlex .gi {
+    color: white;
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+    border-bottom: 5px radius black;
+  }
+  .menuFlex .pmm {
+    width: 100%;
+    color: black;
+    margin-top: 2%;
+    text-align: center;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .menuFlex li {
+    width: 100%;
+    list-style: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .menuFlex li ul {
+    text-align: center;
+    font-size: large;
+    width: 100%;
+  }
+  .menuFlex li ul a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .menuFlex li ul a:hover {
+    color: white;
+    border: 10px black;
+    border-radius: 10px;
+    font-size: xx-large;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .sectionImagen, .sectionImagen2, .sectionImagen3 {
+    background-image: url(./imagenes/Conciertos-960x768.jpg);
+    width: 80%;
+    height: 350px;
+    margin-left: 10%;
+  }
+  .fontAlign:hover, .fontAlign1:hover, .fontAlign2:hover {
+    color: crimson;
+  }
+  .sectionImagen2 {
+    background-image: url(./imagenes/2019-04-06-Los-recitales.webp);
+  }
+  .sectionImagen3 {
+    background-image: url(./imagenes/mesa_grabacion_02_1200x500.jpg);
+  }
+  .mapa {
+    width: 100%;
+    height: 300px;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: solid 10px #8e048e;
+  }
+}
+
+/*-----------------all responsive----------------*/
 /*# sourceMappingURL=estilos.css.map */
